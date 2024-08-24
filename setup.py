@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="jdif",
-    version="2.0.5",
+    version="2.0.6",
     description="To find json differences on CLI, please visit the following url",
     long_description="https://github.com/Shivani-20/json-diff-cli/blob/main/readme.md",
     author="shivani",

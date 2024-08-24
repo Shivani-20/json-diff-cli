@@ -5,5 +5,3 @@ To find difference between two long json files on the cli itself, instead of dow
 ## Usage
 
 ![alt text](visuals/jdif_cli.png)
-
-<video controls src="visuals/jdif_cli.mp4"></video>
