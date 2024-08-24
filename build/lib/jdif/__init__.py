@@ -4,18 +4,17 @@ import json
 from deepdiff import DeepDiff
 from termcolor import colored
 from copy import deepcopy
-from terminaltables import AsciiTable
 import sys
-
+from display import print_side_by_side
 
 # to present json differences side by side
 def formatOutput(json1,json2,file1,file2):
     print("\n\n")
     json_str1=json.dumps(json1,indent=2).encode().decode('unicode_escape')
     json_str2=json.dumps(json2,indent=2).encode().decode('unicode_escape')
-    table_data = [[file1, file2],[json_str1, json_str2]]
-    table = AsciiTable(table_data)
-    print(table.table)
+    print_side_by_side(file1,file2)
+    print("\n")
+    print_side_by_side(json_str1,json_str2)
 
 
 # to delete paths which are different
@@ -134,3 +133,7 @@ def start():
             print(colored(f"'{args.jsonFilePath2}' not a valid file path","red"))
             sys.exit()
         findJsonDifference(args.jsonFilePath1, args.jsonFilePath2)
+
+
+if __name__ == "__main__":
+    start()
