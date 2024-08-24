@@ -4,7 +4,7 @@ with open("README.md", "r") as f:
     desc = f.read()
 setup(
     name="jdif",
-    version="2.0.0",
+    version="2.0.1",
     description="To find json differences",
     long_description=desc,
     long_description_content_type="text/markdown",

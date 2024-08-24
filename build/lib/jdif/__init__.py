@@ -5,7 +5,7 @@ from deepdiff import DeepDiff
 from termcolor import colored
 from copy import deepcopy
 import sys
-from display import print_side_by_side
+from .display import print_side_by_side
 
 # to present json differences side by side
 def formatOutput(json1,json2,file1,file2):
