@@ -1,10 +1,14 @@
 from setuptools import setup
 
+with open("README.md", "r") as f:
+    desc=f.read()
+
 setup(
     name="jdif",
-    version="2.0.6",
-    description="To find json differences on CLI, please visit the following url",
-    long_description="https://github.com/Shivani-20/json-diff-cli/blob/main/readme.md",
+    version="2.0.7",
+    description="To find json differences on CLI",
+    long_description=desc,
+    long_description_content_type="text/markdown",
     author="shivani",
     license='MIT',
     entry_points={
