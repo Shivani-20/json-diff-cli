@@ -126,12 +126,6 @@ def start():
         print(colored("jdif example_1.json example_2.json","yellow"))
         sys.exit()
     else:
-        if not isinstance(args.jsonFilePath1, PurePath):
-            print(colored(f"'{args.jsonFilePath1}' not a valid file path","red"))
-            sys.exit()
-        if not isinstance(args.jsonFilePath2, PurePath):
-            print(colored(f"'{args.jsonFilePath2}' not a valid file path","red"))
-            sys.exit()
         findJsonDifference(args.jsonFilePath1, args.jsonFilePath2)
 
 
