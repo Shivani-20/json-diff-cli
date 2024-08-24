@@ -2,7 +2,7 @@
 
 To find difference between two long json files on the cli itself, instead of downloading files and copy pasting on some website to find the difference. Helpful when comparing production env data with the admin dashboard data during the debugging process.
 
-![alt text](visuals/jdif_cli.png)
+![https://github.com/Shivani-20/json-diff-cli/blob/main/readme.md](visuals/jdif_cli.png)
 
 ## Installation
 
