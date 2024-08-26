@@ -39,11 +39,33 @@ Empty json in 'b1.json'
 
 >>> jdif a1.json b1.json
 JSON is same in both the files
-
 ```
+**order** of the keys might change within an object because we are first processing values then modified keys:
+
+suppose if j1.json has:
+```json
+{
+    "key1": true,
+    "key3": "abcd"
+}
+```
+j2.json:
+```json
+{
+    "key4": false,
+    "key3": ""
+}
+```
+``` python
+>>> jdif j1.json j2.json
+```
+
+[![Example](https://raw.githubusercontent.com/Shivani-20/json-diff-cli/main/visuals/order.png)]
+
 
 ## Features
 
-* Takes care of unicode characters
+* Takes care of unicode, windows1252 characters, so the strings could be any language or represent a symbol
 * Takes care of long descriptive values or keys
 * Takes care of empty valued strings
+* Instead of dumping into some other file, it displays the differences on the console itself 

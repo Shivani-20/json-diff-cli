@@ -9,9 +9,7 @@ from termcolor import colored
 def getActualLength(str):
     ESC = Literal('\x1b')
     integer = Word(nums)
-    escapeSeq = Combine(ESC + '[' + Optional(delimitedList(integer,';')) + 
-                    oneOf(list(alphas)))
-
+    escapeSeq = Combine(ESC + '[' + Optional(delimitedList(integer,';')) + oneOf(list(alphas)))
     nonAnsiString = lambda s : Suppress(escapeSeq).transformString(s)
     unColorString = nonAnsiString(str)
     return len(unColorString)
@@ -22,7 +20,10 @@ def make_substrings(s, L):
     i = 0
     pieces = []
     color = findColor(s[0:10])
-    pieces=[colored(s[i:i+L],color) for i in range(0, len(s), L)]
+    j=L
+    pieces.append(s[0:L])
+    for i in range(j, len(s), L):
+        pieces.append(colored(s[i:i+L],color))
     return pieces
 
 
