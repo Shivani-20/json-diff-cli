@@ -3,6 +3,7 @@ import math
 import os
 import charade
 from pyparsing import *
+from termcolor import colored
 
 # to get length of colored strings
 def getActualLength(str):
@@ -20,10 +21,18 @@ def getActualLength(str):
 def make_substrings(s, L):
     i = 0
     pieces = []
-    while i < len(s):
-        pieces.append(s[i:i+L])
-        i += L
+    color = findColor(s[0:10])
+    pieces=[colored(s[i:i+L],color) for i in range(0, len(s), L)]
     return pieces
+
+
+# helper- to give the to strings whn they are broken while printing
+def findColor(s):
+    if s.startswith("\"\x1b[31m"):
+        return "red"
+    elif s.startswith("\"\x1b[32m"):
+        return "green"
+    return "white"
 
 
 # Print lines side by side for colored text
@@ -33,7 +42,7 @@ def customFormat(token1,token2):
     token1 = token1 + (' ' * rem_space)
     line_fmt += ('{:<' + '}'
             + (' ' * math.floor((col_padding-len(delimiter))/2.))
-            + delimiter
+            + colored(delimiter,"white")
             + (' ' * math.ceil((col_padding-len(delimiter))/2.))
             + '{:<' + '}')
     print(line_fmt.format(token1, token2))
@@ -52,7 +61,6 @@ def print_side_by_side(output1, output2):
     lines2 = output2.split('\n')
     lines1=[i.strip() for i in lines1]
     lines2=[i.strip() for i in lines2]
-
     max_num_lines = max(len(lines1), len(lines2))
     global delimiter
     delimiter='|'
@@ -64,7 +72,7 @@ def print_side_by_side(output1, output2):
     # Print lines side by side for normal text
     line_fmt += ('{:<' + str(col_width) + '}'
                + (' ' * math.floor((col_padding-len(delimiter))/2.))
-               + delimiter
+               + colored(delimiter,"white")
                + (' ' * math.ceil((col_padding-len(delimiter))/2.))
                + '{:<' + str(col_width) + '}')
 
@@ -85,11 +93,9 @@ def print_side_by_side(output1, output2):
             token1 = row1[j] if j < len(row1) else ''
             token2 = row2[j] if j < len(row2) else ''         
             x=charade.detect(token1.encode())
-            if x["encoding"]:
+            y=charade.detect(token2.encode())
+            if x["encoding"]=="ascii" and y["encoding"]==ascii:
                 print(line_fmt.format(token1, token2))
             else:
-                if not token1:
-                    print(line_fmt.format(token1, token2))
-                else:
-                    customFormat(token1, token2)
+                customFormat(token1, token2)
             j += 1

@@ -1,0 +1,36 @@
+{
+    "main": {
+        "a1": {
+            "b1": {
+                "key1": false,
+                "key2":  "â€™",
+                "key3": "Война́ и миръ"
+            }
+        },
+        "a2a2a2a2a2a2a2a2a2descdesca2a2a2a2a2a2a2a2a2a2a2a2descdesca2a2a2a2a2a2a2a2a2a2a2a2descdesca2a2a2a2a2a2a2a2a2a2a2a2descdesca2a2a2a2a2a2a2a2a2a2a2a2descdesca2a2a2a2a2a2a2a2a2a2a2a2descdesca2a2a2a2a2a2a2a2a2a2a2a2descdesca2a2a2a2a2a2a2a2a2a2a2a2descdesca2a2a2a2a2a2a2a2a2a2a2a2descdesca2a2a2": {
+            "b2": {
+                "key3": "سلام"
+            }
+        },
+        "a3": {
+            "b3": {
+                "key4": "",
+                "key5key5key5key5keykey5keykey5key5key5key5key5key5keykey5keykey5key5key5key5key5key5keykey5keykey5key5desc": "$$$"
+            }
+        },
+        "a4": {
+            "key5": "",
+            "key6": "descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type"     
+        },
+        "a5": "both descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type",
+        "a6": "same descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type descriptive type",
+        "a7": {
+          "key6": ""
+         },
+      
+     "a8": {
+          "lonlonglonglonglonglonlonglonglonglonglonlonglonglonglonglonlonglonglonglonglonlonglonglonglonglonlonglonglonglongdecriptiveKey": "",
+          "key6": ""
+      }
+      }
+  }

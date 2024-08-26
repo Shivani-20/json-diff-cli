@@ -1,5 +1,5 @@
 import argparse
-from pathlib import Path, PurePath
+from pathlib import Path
 import json
 from deepdiff import DeepDiff
 from termcolor import colored
@@ -62,16 +62,18 @@ def markChangedKeys(itemsAdded,d):
 
 
 def findJsonDifference(path1: Path,path2: Path):
-    # extract json contents from specified file path
+    # check if file path is correct, 
+    # check if there is readable content
+    # check if extension is provided
     try:
-        with path1.open() as f1:
+        with path1.open(encoding='utf-8') as f1:
             json_str1 = f1.read()
     except:
         print(colored(f"Unable to read file in '{path1}', please verify the path and filename alongwith the extension","red"))
         sys.exit()
 
     try:    
-        with path2.open() as f2:
+        with path2.open(encoding='utf-8') as f2:
             json_str2 = f2.read()
     except:
         print(colored(f"Unable to read file in '{path2}', please verify the path and filename alongwith the extension","red"))

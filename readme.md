@@ -2,8 +2,6 @@
 
 To find difference between two long json files on the cli itself, instead of downloading files and copy pasting on some website to find the difference. Helpful when comparing production env data with the admin dashboard data during the debugging process.
 
-![https://github.com/Shivani-20/json-diff-cli/blob/main/readme.md](visuals/jdif_cli.png)
-
 ## Installation
 
 ``pip install jdif``
@@ -30,3 +28,20 @@ Empty json in 'b1.json'
 >>> jdif a1.json b1.json
 JSON is same in both the files
 
+>>> if a key appears in first file but not in second file OR the key appears in second file but not in first file,
+color of the key changes to red
+
+>>> if a value of a specific key is different in both the files, 
+color of that key-value pair changes to green:
+
+Combination of above 2 example
+
+![https://github.com/Shivani-20/json-diff-cli/raw/main/visuals/jdif_cli.png](visuals/jdif_cli.png)
+
+```
+
+## Features
+
+* Takes care of unicode characters
+* Takes care of long descriptive values or keys
+* Takes care of empty valued strings

@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="jdif",
-    version="3.0.0",
+    version="4.0.0",
     description="To find json differences on CLI",
     long_description=desc,
     long_description_content_type="text/markdown",
