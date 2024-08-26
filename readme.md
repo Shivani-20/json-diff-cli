@@ -65,7 +65,7 @@ j2.json:
 
 ## Features
 
-* Takes care of unicode, windows1252 characters, so the strings could be any language or represent a symbol
+* Takes care of unicode, windows1252 characters, so the strings could be in any language or represent a symbol
 * Takes care of long descriptive values or keys
 * Takes care of empty valued strings
 * Instead of dumping into some other file, it displays the differences on the console itself 

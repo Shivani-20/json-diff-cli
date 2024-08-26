@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="jdif",
-    version="4.5.1",
+    version="4.6.1",
     description="To find json differences on CLI",
     long_description=desc,
     long_description_content_type="text/markdown",
@@ -27,7 +27,8 @@ setup(
         "Intended Audience :: Developers",
         "Topic :: File Formats :: JSON",
         "Topic :: File Formats :: JSON :: JSON Schema",
-        "Topic :: Software Development :: Debuggers"
+        "Topic :: Software Development :: Debuggers",
+        "Environment :: Console"
     ],
     package_dir={"": "src"},
     packages=["jdif"],
