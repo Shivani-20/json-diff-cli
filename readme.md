@@ -8,15 +8,15 @@ To find difference between two long json files on the cli itself, instead of dow
 
 ## Quickstart
 
->>> if a key appears in first file but not in second file OR the key appears in second file but not in first file,
+* if a key appears in first file but not in second file OR the key appears in second file but not in first file,
 color of the key changes to red
 
->>> if a value of a specific key is different in both the files, 
+* if a value of a specific key is different in both the files, 
 color of that key-value pair changes to green:
 
 Combination of above 2 example
 
-![https://github.com/Shivani-20/json-diff-cli/raw/main/visuals/jdif_cli.png](visuals/jdif_cli.png)
+[![Example](https://raw.githubusercontent.com/Shivani-20/json-diff-cli/main/visuals/jdif_cli.png)]
 
 ## Caveats
 
