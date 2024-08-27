@@ -106,11 +106,11 @@ def findJsonDifference(path1: Path,path2: Path):
             print(colored("JSON is same in both the files","green"))    
         else:
             if("values_changed" in result):
-                (result["values_changed"],json1,json2)
+                markChangedValues(result["values_changed"],json1,json2)
             if("dictionary_item_added" in result):
                 markChangedKeys(result["dictionary_item_added"],json2)
             if("dictionary_item_removed" in result):
-                (result["dictionary_item_removed"],json1)
+                markChangedKeys(result["dictionary_item_removed"],json1)
             formatOutput(json1,json2,path1.name,path2.name)
 
 def start():
