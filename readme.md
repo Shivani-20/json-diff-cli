@@ -1,10 +1,12 @@
+Generates differences between two json files on the console in a colored and columnar manner.
+
 ## Motivation
 
 To find difference between two long json files on the cli itself, instead of downloading files and copy pasting on some website to find the difference. Helpful when comparing production env data with the admin dashboard data during the debugging process.
 
 ## Installation
 
-``pip install jdif``
+``pip install json-diff-cli``
 
 ## Quickstart
 

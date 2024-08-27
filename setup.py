@@ -4,9 +4,9 @@ with open("README.md", "r") as f:
     desc=f.read()
 
 setup(
-    name="jdif",
-    version="4.6.2",
-    description="To find json differences on CLI",
+    name="json-diff-cli",
+    version="1.0.0",
+    description="To display json differences on CLI",
     long_description=desc,
     long_description_content_type="text/markdown",
     author="shivani",
@@ -32,7 +32,7 @@ setup(
     ],
     package_dir={"": "src"},
     packages=["jdif"],
-    python_requires='>=3.10',
+    python_requires='>=3.8',
     install_requires=[
         'termcolor>=2.4.0',
         'deepdiff>=7.0.1',
