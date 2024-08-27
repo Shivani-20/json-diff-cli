@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="json-diff-cli",
-    version="1.0.0",
+    version="1.0.1",
     description="To display json differences on CLI",
     long_description=desc,
     long_description_content_type="text/markdown",
@@ -23,7 +23,7 @@ setup(
     classifiers=[
         "Programming Language :: Python :: 3.12",
         "License :: OSI Approved :: MIT License",
-        "Operating System :: Microsoft :: Windows",
+        "Operating System :: OS Independent",
         "Intended Audience :: Developers",
         "Topic :: File Formats :: JSON",
         "Topic :: File Formats :: JSON :: JSON Schema",
